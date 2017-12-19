@@ -1,0 +1,2 @@
+This is the template file set for template TRAINING - RESPECT-v0 ( 9a85fb0d-1bed-41a9-b7bb-013a65faffac, revision 1), exported from the Clinical Knowledge Manager.
+Export time: Mon Dec 11 16:26:33 CET 2017
