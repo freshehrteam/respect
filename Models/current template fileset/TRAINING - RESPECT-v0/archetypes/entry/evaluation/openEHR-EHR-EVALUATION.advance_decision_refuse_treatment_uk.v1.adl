@@ -8,19 +8,17 @@ language
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics, UK">
 		["date"] = <"2013-10-11">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record an advance decision to refuse treatment (ADRT) , a decision to refuse a specific treatment, made in
-advance by a person who has capacity to do so.">
-			use = <"To record an advance decision to refuse treatment (ADRT) , a decision to refuse a specific treatment, made in
-advance by a person who has capacity to do so.">
+			purpose = <"To record an advance decision to refuse treatment (ADRT) , a decision to refuse a specific treatment, made in advance by a person who has capacity to do so.">
+			use = <"To record an advance decision to refuse treatment (ADRT) , a decision to refuse a specific treatment, made in advance by a person who has capacity to do so.">
 			keywords = <"DNACPR", "resuscitation", "EoL", "directive", "preference">
-			misuse = <"This archetype should not be used to convey the results of other advanced directives, patient preferences or resusciation activity *e.g. suction) which falls short of full cardio-pulminary resuscitation.">
+			misuse = <"This archetype should not be used to convey the results of other advance directives, patient preferences or resusciation activity *e.g. suction) which falls short of full cardio-pulmonary resuscitation.">
 			copyright = <"© Clinical Models UK">
 		>
 	>
@@ -34,7 +32,7 @@ End of Life Care Co-ordination: Core Content Standard Specification Available at
 NHS Scotland Key Information Summary
 
 Leeds ePaccs team">
-		["MD5-CAM-1.0.1"] = <"0AE131A01F7C20917DAC7EAF4AABC33E">
+		["MD5-CAM-1.0.1"] = <"459B94373A8D2234DD7D694C15F0717D">
 	>
 
 definition
@@ -47,10 +45,10 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0004, 	-- Advanced decision to refuse treatment signed
+									at0004, 	-- Advance decision to refuse treatment signed
 									at0005, 	-- Has advance decision to refuse treatment (Mental Capacity Act 2005)
 									at0022, 	-- Has advance decision to refuse life sustaining treatment (Mental Capacity Act 2005)
-									at0028]	-- Advanced directive not signed
+									at0028]	-- Advance directive not signed
 								}
 							}
 						}
@@ -65,8 +63,8 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0025, 	-- Informal carer not aware of advanced directive
-									at0026]	-- Informal carer aware of advanced directive
+									at0025, 	-- Informal carer not aware of advance directive
+									at0026]	-- Informal carer aware of advance directive
 								}
 							}
 						}
@@ -100,7 +98,6 @@ definition
 		}
 	}
 
-
 ontology
 	terminologies_available = <"READ2", "RCD99", "SNOMED-CT">
 	term_definitions = <
@@ -124,8 +121,8 @@ ontology
 					description = <"The state of the decision to refuse treatment.">
 				>
 				["at0004"] = <
-					text = <"Advanced decision to refuse treatment signed">
-					description = <"The subject has signed an advanced decision to refuse treatment.">
+					text = <"Advance decision to refuse treatment signed">
+					description = <"The subject has signed an advance decision to refuse treatment.">
 				>
 				["at0005"] = <
 					text = <"Has advance decision to refuse treatment (Mental Capacity Act 2005)">
@@ -156,19 +153,19 @@ ontology
 					description = <"The subject has signed an advance decision to refuse life sustaining treatment (Mental Capacity Act 2005).">
 				>
 				["at0025"] = <
-					text = <"Informal carer not aware of advanced directive">
-					description = <"The informal carer is not aware of the subject's advanced directive.">
+					text = <"Informal carer not aware of advance directive">
+					description = <"The informal carer is not aware of the subject's advance directive.">
 				>
 				["at0026"] = <
-					text = <"Informal carer aware of advanced directive">
-					description = <"The informal carer is aware of the subject's advanced directive.">
+					text = <"Informal carer aware of advance directive">
+					description = <"The informal carer is aware of the subject's advance directive.">
 				>
 				["at0027"] = <
 					text = <"Decision to refuse treatment discussed with healthcare professional">
 					description = <"The subject has discussed their decision to refuse treatment with a healthcare professional.">
 				>
 				["at0028"] = <
-					text = <"Advanced directive not signed">
+					text = <"Advance directive not signed">
 					description = <"The subject has not signed and advance directive or has rescinded an early directive.">
 				>
 			>

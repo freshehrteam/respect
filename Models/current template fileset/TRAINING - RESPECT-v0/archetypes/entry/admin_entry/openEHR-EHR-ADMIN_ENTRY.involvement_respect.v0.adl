@@ -8,8 +8,8 @@ language
 description
 	original_author = <
 		["name"] = <"Hildegard Franke">
-		["email"] = <"hildi@freshehr.com">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"hildi@freshehr.com">
 		["date"] = <"2017-08-30">
 	>
 	details = <
@@ -21,18 +21,18 @@ description
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"NotSet">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
-		["original_publisher"] = <"UK Clinical Models">
-		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["build_uid"] = <"b622dad7-b681-48c7-b17c-d4dc3ca11ba9">
-		["original_namespace"] = <"uk.org.clinicalmodels">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["MD5-CAM-1.0.1"] = <"F989A75E7482929E442CC936375C9F18">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"7F0585D5630BDF45FCB12B1A34DC89F6">
+		["build_uid"] = <"8d7c432a-ad24-43ef-b4a9-b1f547e5f307">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -69,10 +69,20 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Date of recommendations
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0015] occurrences matches {0..*} matches {	-- Name and role of those involved in decision making
+						include
+							archetype_id/value matches {/.*/}
+					}
 				}
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -104,11 +114,15 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Reason for not selecting Options A or B or C">
-					description = <"Description of reason for not selecting Options A, B or C.">
+					description = <"Description of reason for not selecting Options A, B or C or where C1 or C2 is selected without selecting C3.">
+					comment = <"Additional implementation guidance: in an electronic format, if someone selects D we could have a line coming up explaining that the only legal reasons for selecting D are:
+1. if the physician thinks it would cause the patient physiological or psychological harm
+2. if the patient lacks capacity, and it is not practicable or appropriate to contact those close to them.">
 				>
 				["at0009"] = <
 					text = <"Location of record of discussion">
-					description = <"Details of location of records of discussion about recommendations.">
+					description = <"Details of location(s) of full documentation of conversations and decision-making process.">
+					comment = <"For example in GP Records dated xx/xx/xxxx.">
 				>
 				["at0010"] = <
 					text = <"C2 Person less than 18 or 16 without sufficient maturity">
@@ -116,7 +130,7 @@ ontology
 				>
 				["at0011"] = <
 					text = <"C3 Person less than 18 or 16 parental decision">
-					description = <"This person is less than 18 (UK except Scotland) /16 (Scotland) and those holding parental responsibility have been fully involved in discussing and making this plan. ">
+					description = <"This person is less than 18 (UK except Scotland) /16 (Scotland) and those holding parental responsibility have been fully involved in discussing and making this plan.">
 				>
 				["at0012"] = <
 					text = <"Involvement in recommendations">
@@ -125,6 +139,14 @@ ontology
 				["at0013"] = <
 					text = <"D No other option selected">
 					description = <"No other option has been selected, and valid reason is stated below. Full explanation is documented in clinical record.">
+				>
+				["at0014"] = <
+					text = <"Date of recommendations">
+					description = <"Date when recommendations are made.">
+				>
+				["at0015"] = <
+					text = <"Name and role of those involved in decision making">
+					description = <"Name and role of those involved in decision making.">
 				>
 			>
 		>
