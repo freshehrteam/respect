@@ -8,8 +8,8 @@ language
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2013-10-18">
 	>
 	details = <
@@ -21,17 +21,17 @@ description
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"NotSet">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
-		["original_publisher"] = <"UK Clinical Models">
-		["build_uid"] = <"69855861-f7de-4a6f-91c0-a8d5e677e401">
-		["original_namespace"] = <"uk.org.clinicalmodels">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["MD5-CAM-1.0.1"] = <"C0A3D0B45D0FBB28657D1C56229E85A7">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"AA45A4552E64A5CC08104414CDA59D7A">
+		["build_uid"] = <"c9e34c32-2608-45df-a66c-e758bca7c699">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -161,6 +161,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", "RCD99", "READ2">
@@ -322,7 +323,7 @@ ontology
 				>
 				["at0039"] = <
 					text = <"Care priority scale">
-					description = <"Indication on a scale of 1 - 100 of where priority for care should be. 1 indicates absolute priority on sustaining life (even at the expense of comfort) and 10 indicates absolute priority on comfort (even at the expense of sustaining life).">
+					description = <"Indication on a scale of 1 - 100 of where priority for care should be. 1 indicates absolute priority on sustaining life (even at the expense of comfort) and 100 indicates absolute priority on comfort (even at the expense of sustaining life).">
 				>
 			>
 		>
