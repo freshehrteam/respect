@@ -8,8 +8,8 @@ language
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics, UK">
 		["date"] = <"2013-10-11">
 	>
 	details = <
@@ -26,11 +26,14 @@ Some patients with capacity to make their own decision may refuse attempted card
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"NotSet">
 	other_contributors = <>
 	other_details = <
+		["revision"] = <"0.0.1-alpha">
+		["original_publisher"] = <"UK Clinical Models">
+		["build_uid"] = <"a506f9ba-a07c-433c-86ba-3408a54fb22c">
+		["original_namespace"] = <"uk.org.clinicalmodels">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"UK Clinical Models">
 		["references"] = <"Information Standards Board ISB Data Dictionary Available at http://www.datadictionary.nhs.uk/
 
 End of Life Care Co-ordination: Core Content Standard Specification Available at http://www.isb.nhs.uk/documents/isb-1580/amd-29-2012/index_html
@@ -38,12 +41,9 @@ End of Life Care Co-ordination: Core Content Standard Specification Available at
 NHS Scotland Key Information Summary
 
 Leeds ePaccs team">
-		["original_namespace"] = <"uk.org.clinicalmodels">
-		["original_publisher"] = <"UK Clinical Models">
+		["MD5-CAM-1.0.1"] = <"40CBAF5A01D32E8917DDDFD752562AF4">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"0F6626B48ECBB041F15DC42CE98C7872">
-		["build_uid"] = <"a506f9ba-a07c-433c-86ba-3408a54fb22c">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"UK Clinical Models">
 	>
 
 definition
@@ -69,7 +69,7 @@ definition
 							DV_DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Modification for Modified CPR child only
+					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Details for Modified CPR child only
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -157,7 +157,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	terminologies_available = <"SNOMED-CT", "RCD99", "READ2">
@@ -273,7 +272,7 @@ ontology
 					description = <"Modified CPR is recommended for child only.">
 				>
 				["at0028"] = <
-					text = <"Modification for Modified CPR child only">
+					text = <"Details for Modified CPR child only">
 					description = <"Narrative description of modification where modified CPR for child only has been selected.">
 				>
 			>
